@@ -1,1 +1,2 @@
-# bellabeat-google-data-analytics-capstone
+# Google Data Analytics Capstone - Bellabeat
+
