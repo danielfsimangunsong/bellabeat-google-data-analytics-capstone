@@ -1,0 +1,29 @@
+# Google Data Analytics Capstone - Bellabeat
+
+This is an optional capstone project of Google Data Analytics Specialization on [Coursera](https://www.coursera.org/professional-certificates/google-data-analytics).
+
+## Steps
+
+1.  Ask
+2.  Prepare
+3.  Process
+4.  Analyze
+5.  Share
+6.  Act
+
+## Step 1: Ask
+
+In this step, I identify the business task of this project and key stakeholders who involved
+
+### 1.1 Business Task
+
+Analyze FitBit fitness tracker customer data trends to help influence Bellabeat marketing strategy.
+
+### 1.2 Key Stakeholders
+
+-   Urška Sršen: Bellabeat's cofounder and Chief Creative Officer
+-   Sando Mur: Mathematician and Bellabeat's cofounder; key member of the Bellabeat executive team
+-   Bellabeat marketing analytics team: A team of data analysts who guides Bellabeat's marketing strategy
+
+## Step 2: Prepare
+
