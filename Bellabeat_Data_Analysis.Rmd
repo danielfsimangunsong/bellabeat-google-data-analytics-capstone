@@ -13,7 +13,7 @@ This is an optional capstone project of Google Data Analytics Specialization on 
 
 ## Step 1: Ask
 
-In this step, I identify the business task of this project and key stakeholders who involved
+To begin with, I identify the business task of this project and key stakeholders who involved
 
 ### 1.1 Business Task
 
@@ -27,3 +27,97 @@ Analyze FitBit fitness tracker customer data trends to help influence Bellabeat 
 
 ## Step 2: Prepare
 
+Next, I identify the data along its characteristics.
+
+### Data Source
+
+The data being used is stored on [Kaggle](https://www.kaggle.com/datasets/arashnic/fitbit) and contains 18 csv files.
+
+### Data Selection
+
+The data that is selected for this analysis is the dailyActivity_merged.csv file.
+
+## Step 3: Process
+
+In the Process step, I check data errors, transform the data, and clean the data to be analyzed.
+
+#### Loading Packages
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+#### Import data
+
+```{r}
+data <- read.csv("./data/dailyActivity_merged.csv")
+```
+
+### Display the imported data
+
+```{r}
+head(data)
+```
+
+```{r}
+str(data)
+```
+
+### Explore data
+
+```{r}
+n_distinct(data$Id)
+```
+From the result above, it shows that there are 33 unique id
+
+### Fix formatting
+Here, I convert the ActivityDate to yyyy-mm-dd data type
+
+```{r}
+data$ActivityDate = as.Date(data$ActivityDate, format="%m/%d/%Y")
+str(data$ActivityDate)
+```
+
+## Step 4: Analyze
+
+### Summarize the data
+```{r}
+data %>%  
+  select(Id,
+         Calories) %>%
+  summary()
+```
+
+```{r}
+data %>%  
+  select(TotalSteps,
+         TotalDistance,
+         TrackerDistance,
+         LoggedActivitiesDistance) %>%
+  summary()
+```
+```{r}
+data %>%  
+  select(VeryActiveDistance,
+         ModeratelyActiveDistance,
+         LightActiveDistance,
+         SedentaryActiveDistance) %>%
+  summary()
+```
+```{r}
+data %>%  
+  select(VeryActiveMinutes,
+         FairlyActiveMinutes,
+         LightlyActiveMinutes,
+         SedentaryMinutes) %>%
+  summary()
+```
+
+## Step 5: Share
+In this step, I make several visualization of the data
+
+### 
